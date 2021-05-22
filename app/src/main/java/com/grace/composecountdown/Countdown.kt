@@ -90,10 +90,12 @@ fun Countdown() {
                     textAlign = TextAlign.Center
                 )
             )
+            val theta = position?.theta ?: 0f
             for (i in 0 until 40) {
+                val angle = i * 9
                 TickMark(
-                    angle = i * 9,
-                    on = i < 15
+                    angle = angle,
+                    on = angle < theta
                 )
             }
         }
